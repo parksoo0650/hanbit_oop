@@ -2,6 +2,8 @@ package test;
 
 import javax.swing.*;
 
+import hospital.BMI;
+
 public class Controller {
     
     public void test() {
@@ -35,21 +37,7 @@ public class Controller {
 
 		break;
 	    case "2":
-		BMI bmi = new BMI();
-		while (true) {
-		    // 한석규(남) 과체중
-		    // member.getUid().eqauls(tempUid);
-		    if (member.getUid().equals(JOptionPane.showInputDialog("아이디"))) {
-			JOptionPane.showMessageDialog(null, "아이디를 다시입력하세요.");
-		    } else {
-			break;
-		    }
-		    member.setUid(JOptionPane.showInputDialog("아이디"));
-		    double cm = Integer.parseInt(JOptionPane.showInputDialog("키?"));
-		    double kg = Integer.parseInt(JOptionPane.showInputDialog("몸무게?"));
-		    String bmi1 = bmi.calcBmi(cm / 100, kg);
-		    JOptionPane.showMessageDialog(null, member.getName() + "(" + gender + ")" + bmi1);
-		}
+		
 	    case "3":
 		break;
 	    case "4":

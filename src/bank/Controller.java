@@ -7,6 +7,7 @@ public class Controller {
     public void start(){
 	Member mem=null;
 	Account account=null;
+	
 	String ssn="";
 	while(true){
 	  /*  int opt=Integer.parseInt(option);
@@ -33,7 +34,7 @@ public class Controller {
 	    		String uid="";
 	    		int money=0;
 	    		String accountType="저축예금";
-	    		account=new Account(uid,accountType, money);
+	    		account = new WageAccount(uid,accountType, money);
 	    		StringBuffer sb = new StringBuffer();
 	    		sb.append("["+Account.BANK_NAME+"]\n");
 	    		sb.append("계좌번호 :" + account.getAccountNo() + "\n");
@@ -48,8 +49,14 @@ public class Controller {
 	    		 * 잔액:￦0
 	    		 */
 	    		break;
-		    case "3": break;
-		    case "4": break;
+		    case "3": 
+			    JOptionPane.showMessageDialog(null,account.depost
+				    (Integer.parseInt(JOptionPane.showInputDialog("입금할 금액을 입력하여 주세요."))));
+			break;
+		    case "4": 
+			   JOptionPane.showMessageDialog(null,account.withdraw
+				   (Integer.parseInt(JOptionPane.showInputDialog("출금할 금액을 입력하여 주세요."))));
+			break;
 		    case "5": break;
 		    case "6": break;
 	    
